@@ -1,0 +1,29 @@
+{
+    "inputs": [
+        {
+            "inputName": "input-1",
+            "inputValue": {
+                "pdf_path": "samples/PO1.pdf",
+                "prompt": "Return relevant data in a json format.",
+                "api_key": "<specify-secret>"
+            }
+        }
+    ],
+    "metadata": {
+        "actionName": "extract_data_from_pdf",
+        "actionRelativePath": "actions.py",
+        "schemaDescription": [
+            "pdf_path: string: Path to the local PDF file",
+            "prompt: string: The prompt to guide the extraction process"
+        ],
+        "managedParamsSchemaDescription": {
+            "api_key": {
+                "type": "Secret",
+                "description": "The API key for Anthropic"
+            }
+        },
+        "inputFileVersion": "v3",
+        "kind": "action",
+        "actionSignature": "action/args: 'pdf_path: str, prompt: str, api_key: Secret'"
+    }
+}
