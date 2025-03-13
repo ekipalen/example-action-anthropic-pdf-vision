@@ -15,7 +15,7 @@ def extract_data_from_pdf(pdf_path: str, prompt: str, api_key: Secret) -> Respon
     """Extracts data from a PDF file using Anthropic.
 
     Args:
-        pdf_path: Path to the local PDF file
+        pdf_path: Path to the file. From the full file URL, remove the "file:///" prefix to obtain the path.
         prompt: The prompt to guide the extraction process
         api_key: The API key for Anthropic
     Returns:
