@@ -7,6 +7,8 @@ from sema4ai.actions import ActionError, Response, Secret, action
 
 load_dotenv()
 
+MODEL = "claude-3-7-sonnet-20250219"
+
 
 @action
 def extract_data_from_pdf(pdf_path: str, prompt: str, api_key: Secret) -> Response:
@@ -29,7 +31,7 @@ def extract_data_from_pdf(pdf_path: str, prompt: str, api_key: Secret) -> Respon
         key = api_key.value or os.getenv("ANTHROPIC_API_KEY", "")
         client = anthropic.Anthropic(api_key=key)
         message = client.messages.create(
-            model="claude-3-5-sonnet-latest",
+            model=MODEL,
             max_tokens=8192,
             messages=[
                 {
