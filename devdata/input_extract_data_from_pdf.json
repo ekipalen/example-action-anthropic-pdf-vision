@@ -5,7 +5,7 @@
             "inputValue": {
                 "pdf_path": "samples/PO1.pdf",
                 "prompt": "Return relevant data in a json format.",
-                "api_key": "<specify-secret>"
+                "api_key": ""
             }
         }
     ],
